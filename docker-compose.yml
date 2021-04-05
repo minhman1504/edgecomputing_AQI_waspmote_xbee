@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=test_db
+    volumes:
+      # named volumes
+      - ./mongodb:/data/db
+
+  server_py:
+    build: .
+    tty: true
+    privileged: true
+    volumes: 
+      - /dev:/dev
