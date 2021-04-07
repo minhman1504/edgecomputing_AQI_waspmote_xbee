@@ -2,6 +2,6 @@ FROM python:3.7-slim
 
 COPY script.py /app/script.py
 
-RUN pip3 install pyserial pymongo
+RUN pip3 install pyserial pymongo datetime dnspython
 
 CMD ["python3", "-u", "/app/script.py"]
