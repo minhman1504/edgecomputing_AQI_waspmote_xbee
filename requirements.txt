@@ -1,0 +1,6 @@
+pyserial 
+datetime 
+dnspython
+requests
+pymongo
+schedule

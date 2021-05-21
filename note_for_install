@@ -1,0 +1,16 @@
+//install packages python
+using a file requirements.txt to store python packages
+install using command:
+Windows: python -m  pip install -r ./requirements.txt
+Linux: pip3 install -r ./requirements.txt
+
+
+
+Run Container Python
+Linux:
+sudo docker build -t minhman1504/edgecomputing-image .
+sudo docker run --rm --tty --privileged --name edgecomputing-container minhman1504/edgecomputing-image
+sudo docker logs edgecomputing-container
+
+Run docker-compose:
+sudo docker-compose up --build

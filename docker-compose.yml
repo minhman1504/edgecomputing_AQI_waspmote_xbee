@@ -4,8 +4,6 @@ services:
     image: mongo
     ports:
       - 27017:27017
-    environment:
-      - MONGO_INITDB_DATABASE=test_db
     volumes:
       # named volumes
       - ./mongodb:/data/db
@@ -14,5 +12,6 @@ services:
     build: .
     tty: true
     privileged: true
-    volumes: 
-      - /dev:/dev
+    restart: always
+    depends_on: 
+      - mongo
